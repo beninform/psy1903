@@ -69,6 +69,7 @@ let debriefTrial = {
             .ignore(['stimulus', 'trial_type', 'plugin_version', 'collect'])
             .csv();
         console.log(data);
+        jsPsych.progressBar.progress = 1;
     }
 };
 
