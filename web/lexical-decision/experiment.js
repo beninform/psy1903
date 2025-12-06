@@ -39,6 +39,7 @@ for (let block of blocks) {
         		characters: condition.characters,
         		blockId: block.title,
 	        },
+            choices: ['f', 'j'],
 	        on_finish: function (data) {
 	            if (data.response == 'f' && condition.isWord == true) {
 	                data.correct = true;
