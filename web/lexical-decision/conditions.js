@@ -1,4 +1,4 @@
-let conditions = [
+let blocks = [
     {
         title: 'Part 1',
         count: 3,

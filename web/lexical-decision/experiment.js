@@ -14,17 +14,7 @@ let welcomeTrial = {
 };
 timeline.push(welcomeTrial);
 
-// // Create an array of conditions
-// let conditions = [
-//     { characters: 'cat', isWord: true },
-//     { characters: 'pin', isWord: true },
-//     { characters: 'jgb', isWord: false },
-//     { characters: 'mub', isWord: false },
-// ];
-// Shuffle the conditions
-conditions = jsPsych.randomization.repeat(conditions, 1);
-
-for (let block of conditions) {
+for (let block of blocks) {
     let blockIntroTrial = {
         type: jsPsychHtmlKeyboardResponse,
         stimulus: `
@@ -37,7 +27,7 @@ for (let block of conditions) {
         choices: [' '],
     };
     timeline.push(blockIntroTrial);
-
+    // shuffle conditions within block
     blockConditions = jsPsych.randomization.repeat(block.conditions, 1);
 
     for (let condition of blockConditions) {
