@@ -1,4 +1,6 @@
-let jsPsych = initJsPsych();
+let jsPsych = initJsPsych({
+    show_progress_bar: true
+});
 
 let timeline = [];
 
